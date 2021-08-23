@@ -1664,7 +1664,7 @@ print_r($list);
             $url_text='https://api.z-api.io/instances/39E62BCDC020106F4DFD5274800DE1AF/token/FE2E85DBEC41BBCC1E15CD1A/send-text';
       
             $data1=[
-                'phone'=>'55'.$customer->whatsapp,
+                'phone'=>'55'.$customer->phone,
                 'message'=>$message
             ];
              $response=  Curl::to($url_text)
