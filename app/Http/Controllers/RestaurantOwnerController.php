@@ -1580,6 +1580,27 @@ print_r($list);
 
         return response()->json($response);
     }
+
+       
+ /**
+     * @param Request $request
+     */
+    public function receiving_message(Request $request)
+
+    {
+        $restaurant=Restaurant::where('whats_instance',$request->instance)->first();
+        $check=Customer::where('phone',$request->whatsapp)->first();
+        $message= new Message();
+        $message->message=$request->message;
+        $message->phone=$request->phone;
+
+
+        $message->restaurant_id=$restaurant->id;
+        $message->save();
+
+
+    }
+    
  /**
      * @param Request $request
      */

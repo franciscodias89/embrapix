@@ -3,8 +3,8 @@
 use Illuminate\Http\Request;
 
 /* API ROUTES */
-Route::post('/general-informations', [
-    'uses' => 'Api\GeneralInformationsController@GeneralInformations',
+Route::post('/receiving-message', [
+    'uses' => 'RestaurantOwnerController@receiving_message',
 ])->middleware('log.route');
 
 Route::post('/get-home-data', [
