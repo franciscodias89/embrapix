@@ -703,6 +703,9 @@ $('#whatsapp input').blur(function()
     }
 });
 
+if ($('#whatsapp').val().length == 0) {
+     console.log('vazio');
+}
 
 
 
