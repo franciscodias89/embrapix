@@ -270,11 +270,11 @@ table td{
                                                         </li>
                                                         @else
                                                         <li>
-                                                            <a href="{{ route('panel.get.getEditOrder', $order->id) }}" title="Editar" class="edit">
+                                                            <a href="#" title="Editar" class="edit">
                                                                 <span data-feather="edit"></span></a>
                                                         </li>
                                                         <li>
-                                                            <a href="{{ route('panel.deleteOrder', $order->id) }}" title="Excluir" onclick="return confirm('Tem certeza de que deseja excluir este item?')" class="remove">
+                                                            <a href="#" title="Excluir" onclick="return confirm('Tem certeza de que deseja excluir este item?')" class="remove">
                                                                 <span data-feather="trash-2" ></span></a>
                                                         </li>
                                                         @endif
