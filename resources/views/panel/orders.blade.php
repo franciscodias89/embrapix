@@ -692,9 +692,9 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
-$('#whatsapp').blur(function()
+$('#whatsapp input').blur(function()
 {
-    if( !$(this).val() ) {
+    if(!$.trim(this.value).length) { 
         $("#cliente_nao_encontrado").hide();
                                 $("#cliente_encontrado").hide();
                                 $("#aguardando_mensagem").hide();
@@ -702,6 +702,9 @@ $('#whatsapp').blur(function()
                                 $("#falta_cpf").hide();
     }
 });
+
+
+
 
 $(document).ready(function () {
         $('#whatsapp').on('input', function() {
