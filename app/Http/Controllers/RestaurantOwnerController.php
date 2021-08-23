@@ -1574,6 +1574,9 @@ print_r($list);
 
         if(count($check)>=1){
             $response = true;
+
+            
+
         }else{
             $response=false;
         }
@@ -1657,8 +1660,8 @@ print_r($list);
             $order->save();
 
             //ENVIAR MENSAGEM WHATSAPP
-            $message='';
-            $url_text='https://api.z-api.io/instances/39E0BADAF8E17069BF6B5274800DE1AF/token/36903DACBE920D8C082648E2/send-text';
+            $message=$request->name.', você ganhou um desconto na compra atual! Verifique com o vendedor o valor para pagamento atualizado.';
+            $url_text='https://api.z-api.io/instances/39E62BCDC020106F4DFD5274800DE1AF/token/FE2E85DBEC41BBCC1E15CD1A/send-text';
       
             $data1=[
                 'phone'=>'55'.$customer->whatsapp,
