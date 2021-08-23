@@ -1589,13 +1589,13 @@ print_r($list);
 
     {
         $restaurant=Restaurant::where('whats_instance',$request->instance)->first();
-        $check=Customer::where('phone',$request->whatsapp)->first();
+        //$check=Customer::where('phone',$request->whatsapp)->first();
         $message= new Message();
-        $message->message=$request->message;
+        $message->message=$request->text->message;
         $message->phone=$request->phone;
 
 
-        $message->restaurant_id=$restaurant->id;
+        $message->restaurant_id='104';//;$restaurant->id;
         $message->save();
 
 
