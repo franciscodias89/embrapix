@@ -805,10 +805,16 @@ $(document).ready(function () {
     });
 
 
-    $(document).ready(function () {
+   
         $('#cpf').on('input', function() {
             var cpf = $(this).val();
-        );
+            if( (cpf.toString().length)>=10){
+                   
+                   $("#falta_cpf").hide();
+
+//
+               }
+        });
             //$("#cod").val(ean_digitado);
             //var route = this.href.substring(this.href.lastIndexOf('/') + 1);
 
@@ -817,17 +823,10 @@ $(document).ready(function () {
                     
 
                    
-                if( (cpf.toString().length)>=10){
-                   
-                    $("#falta_cpf").hide();
-
-//
-                }
+                
 
 			
-			
-		});
-    });
+	
 
 
 $(document).ready(function() {
