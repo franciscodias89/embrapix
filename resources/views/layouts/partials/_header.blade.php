@@ -414,17 +414,11 @@
                                         <div class="nav-author__options">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('panel.accountProfile') }}">
+                                                    <a href="">
                                                         <span data-feather="user"></span> Minha Conta</a>
                                                 </li>
-                                                <li>
-                                                    <a href="{{ route('panel.settingsProfile') }}">
-                                                        <span data-feather="settings"></span> Configurações</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{ route('panel.accountPlan') }}">
-                                                        <span data-feather="key"></span> Assinatura</a>
-                                                </li>
+                                              
+                                                
                                                 {{-- <li>
                                                     <a href="">
                                                         <span data-feather="users"></span> Activity</a>
