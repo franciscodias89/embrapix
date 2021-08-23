@@ -22,7 +22,7 @@
       {{-- Includable CSS --}}
       @yield('styles')
       {{-- Endinject --}}
-      <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/fav.png') }}">
+      <link rel="icon" type="image/png" sizes="16x16" href="">
    </head>
    <body class="layout-light side-menu @auth() overlayScroll @endauth">
       @auth()
