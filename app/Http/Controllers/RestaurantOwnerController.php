@@ -1592,8 +1592,11 @@ print_r($list);
         //$check=Customer::where('phone',$request->whatsapp)->first();
         $message= new Message();
         $message->message=$request->text['message'];
-        $message->phone=$request->phone;
+        $message->phone=substr($request->phone, 2);
 
+        if($request->status=='RECEIVED'){
+            $message->type=1;
+        }
 
         $message->restaurant_id='104';//;$restaurant->id;
         $message->save();
