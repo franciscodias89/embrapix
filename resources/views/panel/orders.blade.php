@@ -700,13 +700,14 @@ $(function () {
 $(document).ready(function () {
         $('#whatsapp').on('input', function() {
 
-            if( $(this).val() == '' ) {
+            if( $(this).val() == '' || $(this).val() == '(') {
         console.log('vazio');
         $("#cliente_nao_encontrado").hide();
-                                $("#cliente_encontrado").hide();
-                                $("#aguardando_mensagem").hide();
-                                $("#cpf_div").hide();
-                                $("#falta_cpf").hide();
+        $("#cliente_encontrado").hide();
+        $("#aguardando_mensagem").hide();
+        $("#cpf_div").hide();
+        $("#falta_cpf").hide();
+        $("#mensagem_recebida").hide();
     }
 
             var product = $(this).val();
