@@ -22,6 +22,7 @@ use App\StorePayoutDetail;
 use App\User;
 use App\Message;
 use App\Customer;
+use App\RestaurantCustomer;
 use App\Seller;
 use Auth;
 use Ixudra\Curl\Facades\Curl;
@@ -1644,6 +1645,23 @@ print_r($list);
 
         //SALVAR CONTATO NO GOOGLE
        }
+
+       $restaurantCustomerCheck= RestaurantCustomer::where('restaurant_id',$user->restaurant_id)->where('customer_id',$customer->id)->first();
+
+       if($restaurantCustomerCheck){
+           $total=$restaurantCustomerCheck->total +str_replace(",",".", $request->total);
+
+       }else{
+        $total=str_replace(",",".", $request->total); 
+       }
+       $restaurantCustomer = new RestaurantCustomer();
+       $restaurantCustomer->restaurant_id=$user->restaurant_id;
+       $restaurantCustomer->user_id=$user->id;
+       $restaurantCustomer->customer_id=$customer->id;
+       $restaurantCustomer->total=$total;
+       $restaurantCustomer->save();
+
+
               
 
         $order = new Order();
