@@ -421,7 +421,7 @@ table td{
                                             
                                                 <div class="form-group col-md-6" style="padding-left: 0px; display:none" id="cpf_div">
                                                     <label for="cpf">CPF do Cliente</label>
-                                                      <input required type="text"  class="form-control phone" name="cpf"
+                                                      <input required type="text"  class="form-control cpf" name="cpf"
                                                       id="cpf" placeholder="">
                                                 </div>
                                             </div>
@@ -795,6 +795,31 @@ $(document).ready(function () {
                             $('#testMailSpinner').toggle(); */
                         })  
 
+
+//
+                }
+
+			
+			
+		});
+    });
+
+
+    $(document).ready(function () {
+        $('#cpf').on('input', function() {
+            var cpf = $(this).val();
+        );
+            //$("#cod").val(ean_digitado);
+            //var route = this.href.substring(this.href.lastIndexOf('/') + 1);
+
+           //var route= window.location.pathname.split("/").pop();
+          // console.log(route);
+                    
+
+                   
+                if( (cpf.toString().length)>=10){
+                   
+                    $("#falta_cpf").hide();
 
 //
                 }
