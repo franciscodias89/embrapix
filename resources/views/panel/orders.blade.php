@@ -703,8 +703,7 @@ $('#whatsapp input').blur(function()
     }
 });
 
-$('#whatsapp input').blur(function()
-{
+$('#whatsapp').on('change', function() {
     if( $(this).val() == '' ) {
         console.log('vazio');
     }
