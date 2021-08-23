@@ -1648,11 +1648,11 @@ print_r($list);
 
         $order = new Order();
         $order->seller_id = $request->seller_id;
-        $order->sub_total = str_replace(",",".", $request->sub_total);
+       // $order->sub_total = str_replace(",",".", $request->sub_total);
         $order->total=str_replace(",",".", $request->total);
         $order->user_id=$user->id;
         $order->restaurant_id=$user->restaurant_id;
-        $order->discount_amount=str_replace(",",".", $request->sub_total) - str_replace(",",".", $request->total);
+        //$order->discount_amount=str_replace(",",".", $request->sub_total) - str_replace(",",".", $request->total);
         $order->customer_id = $customer->id;
         $order->seller_id=$request->seller_id;
 

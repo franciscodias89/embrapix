@@ -204,8 +204,8 @@ table td{
                                     <tr class="userDatatable-header">
                                         <th><span class="userDatatable-title">ID</span></th>
                                         <th><span class="userDatatable-title">Cliente</span></th>
-                                        <th><span class="userDatatable-title">Subtotal</span></th>
-                                        <th><span class="userDatatable-title">Desconto</span></th>
+                                      {{--   <th><span class="userDatatable-title">Subtotal</span></th>
+                                        <th><span class="userDatatable-title">Desconto</span></th> --}}
                                         <th><span class="userDatatable-title">Total</span></th>
                                         
                                         @if(Request::is('store-owner/orders/deleted'))
@@ -230,14 +230,14 @@ table td{
                                                     <div class="orderDatatable-title">{{ $order->customer->name }}
                                                     </div>
                                                 </td>
-                                                <td style="white-space:normal;">
+                                                {{-- <td style="white-space:normal;">
                                                     <div class="orderDatatable-title">R$ {{ number_format($order->sub_total,2,",",".") }}
                                                     </div>
                                                 </td>
                                                 <td style="white-space:normal;">
                                                     <div class="orderDatatable-title">R$ {{ number_format($order->discount_amount,2,",",".")  }}
                                                     </div>
-                                                </td>
+                                                </td> --}}
                                                 <td style="white-space:normal;">
                                                     <div class="orderDatatable-title">R$ {{ number_format($order->total,2,",",".")    }}
                                                     </div>
@@ -447,7 +447,7 @@ table td{
                                                 </div>
                                             
                                             <div class="row">
-                                            <div class="form-group col-md-6" style="padding-left: 0px;" id="sub_total">
+                                           {{--  <div class="form-group col-md-6" style="padding-left: 0px;" id="sub_total">
                                                 <label for="sub_total"><span class="text-danger">*</span>Valor da Compra</label>
                                                 <div class="input-group input-group-merge">
                                                     <div class="input-group-prepend">
@@ -462,7 +462,7 @@ table td{
                                                     placeholder="0,00"   
                                                     required>
                                                 </div>  
-                                            </div>
+                                            </div> --}}
                                         
                                             <div class="form-group col-md-6 " style="padding-left: 0px;" id="total">
                                                 <label for="total"><span class="text-danger">*</span>Valor com Desconto</label>
