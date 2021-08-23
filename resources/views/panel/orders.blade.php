@@ -692,27 +692,23 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
-$('#whatsapp input').blur(function()
-{
-    if(!$.trim(this.value).length) { 
+
+
+
+
+
+$(document).ready(function () {
+        $('#whatsapp').on('input', function() {
+
+            if( $(this).val() == '' ) {
+        console.log('vazio');
         $("#cliente_nao_encontrado").hide();
                                 $("#cliente_encontrado").hide();
                                 $("#aguardando_mensagem").hide();
                                 $("#cpf_div").hide();
                                 $("#falta_cpf").hide();
     }
-});
 
-$('#whatsapp').on('input', function() {
-    if( $(this).val() == '' ) {
-        console.log('vazio');
-    }
-});
-
-
-
-$(document).ready(function () {
-        $('#whatsapp').on('input', function() {
             var product = $(this).val();
             var product2 = product.replace('(','');
             var product3 = product2.replace(')','');
