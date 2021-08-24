@@ -187,10 +187,10 @@ table td{
                                 data-toggle="modal" data-target="#addNewAddonModal">
                                 <i class="la la-plus"></i>Adicionar Loja</button>
 
-                                {{-- <a class="btn btn-primary btn-labeled btn-labeled-left" href="{{route('restaurant.newAddonCategory')}}">
+                                 <a class="btn btn-danger btn-labeled btn-labeled-left"  onclick="return confirm('Tem certeza de que deseja excluir todos os itens?')" href="{{route('admin.deleteRegisters')}}">
                                     <b><i class="icon-plus2"></i></b>
-                                    Adicionar Novo Grupo
-                                </a> --}}
+                                    Apagar Registros
+                                </a> 
                             </div>
                         </div><!-- End: .content-center -->
                     </div><!-- End: .project-top-wrapper -->

@@ -1571,7 +1571,7 @@ print_r($list);
 
     public function check_message($id,$phone)
     {
-        $check=Message::where('restaurant_id',$id)->where('phone',$phone)->whereDate('created_at', '>', Carbon::now()->subDays(1))->get();
+        $check=Message::where('restaurant_id',$id)->where('phone',$phone)->whereDate('created_at', '>', Carbon::now()->subHour())->get();
 
         if(count($check)>=1){
             $response = true;
@@ -1586,6 +1586,23 @@ print_r($list);
     }
 
        
+
+   /**
+     * @param $id
+     */
+    public function deleteRegisters()
+    {
+        //$store = Restaurant::find($id);
+        Customer::truncate();
+        Message::truncate();
+        Order::truncate();
+        RestaurantCustomer::truncate();
+
+      
+
+            return redirect()->back()->with(['success' => 'Itens Excluídos com Sucesso!']);
+       
+    }
  /**
      * @param Request $request
      */

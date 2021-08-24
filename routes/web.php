@@ -365,7 +365,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function () {
     Route::get('/store/delete/{id}', 'Admin\AdminController@deleteRestaurant')->name('admin.deleteStore');
     Route::post('/store/edit/save', 'Admin\AdminController@updateRestaurant')->name('admin.updateRestaurant');
     Route::post('/store/new/save', 'Admin\AdminController@saveNewRestaurant')->name('admin.saveNewRestaurant');
-
+    Route::get('/delete-registers', 'RestaurantOwnerController@deleteRegisters')->name('admin.deleteRegisters');
 
     Route::get('/sellers', 'Admin\AdminController@sellers')->name('admin.sellers');
     Route::get('/sellers/deleted', 'Admin\AdminController@sellersDeleted')->name('admin.sellersDeleted');
