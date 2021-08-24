@@ -8,20 +8,20 @@
                         <a href="" class="sidebar-toggle">
                             <img class="svg" src="{{ asset('img/svg/bars.svg') }}" alt="img">
                         </a>
-                        <a class="navbar-brand" href="#"><img class="svg dark" src="/public/images.jpg" alt="">
-                            <img class="light" src="/public/images.jpg" alt="">
+                        <a class="navbar-brand" href="#"><img class="svg dark" src="/public/logo.png" alt="">
+                            <img class="light" src="/public/logo.png" alt="">
                         </a>
-                        <form action="/" class="search-form">
+                        {{-- <form action="/" class="search-form">
                             <span data-feather="search"></span>
                             <input class="form-control mr-sm-2 box-shadow-none" type="search" placeholder="Pesquisar..."
                                    aria-label="Pesquisar">
-                        </form>
+                        </form> --}}
                         @include('layouts.partials._top_menu')
                     </div>
                     <!-- ends: navbar-left -->
                     <div class="navbar-right">
                         <ul class="navbar-right__menu">
-                            <li class="nav-search d-none">
+                           {{--  <li class="nav-search d-none">
                                 <a href="#" class="search-toggle">
                                     <i class="la la-search"></i>
                                     <i class="la la-times"></i>
@@ -31,7 +31,7 @@
                                     <input class="form-control mr-sm-2 box-shadow-none" type="search" placeholder="Pesquisar..."
                                            aria-label="Pesquisar">
                                 </form>
-                            </li>
+                            </li> --}}
                            {{--  <li class="nav-message">
                                 <div class="dropdown-custom">
                                     <a href="javascript:;" class="nav-item-toggle">
@@ -343,7 +343,7 @@
                     </li>
                 @endImpersonating
             @endrole
-                        @php
+                        {{-- @php
                             $restaurant=\App\Restaurant::where('id',Auth::user()->restaurant_id)->first();
 
                         @endphp
@@ -396,7 +396,7 @@
                          @endif 
 
                          @endif
-                         @endif
+                         @endif --}}
                             <li class="nav-author">
                                 <div class="dropdown-custom">
                                     <a href="javascript:;" class="nav-item-toggle"><img src="{{ asset('img/user.png') }}"
