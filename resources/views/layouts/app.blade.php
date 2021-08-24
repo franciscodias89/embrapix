@@ -9,7 +9,7 @@
       <!-- CSRF Token -->
       <meta name="csrf-token" content="{{ csrf_token() }}">
       {{-- Title Section --}}
-      <title> Compra Bakana - O Melhor App de Compras do Brasil
+      <title> Embrapix
       </title>
       {{-- Meta Data --}}
       <meta name="description"
