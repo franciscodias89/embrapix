@@ -1696,7 +1696,7 @@ print_r($list);
 
             //ENVIAR MENSAGEM WHATSAPP
             $message=$request->name.', você ganhou um desconto na compra atual! Verifique com o vendedor o valor para pagamento atualizado.';
-            $url_text='https://api.z-api.io/instances/39E62BCDC020106F4DFD5274800DE1AF/token/FE2E85DBEC41BBCC1E15CD1A/send-text';
+            $url_text='https://api.z-api.io/instances/39E7C71621A800D3BC335274800DE1AF/token/C7A0FF998AEE32047F37C06A/send-text';
       
             $data1=[
                 'phone'=>'55'.$customer->phone,
